@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+# A deployment creates a replicaset from pods
+metadata:
+  name: frontend
+  labels:
+    app: flask
+    tier: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask
+      tier: frontend
+  # The template tells you what pods are used inside the deployment
+  template:
+    metadata:
+      labels:
+        app: flask
+        tier: frontend
+    spec:
+      # This tells you what docker container should be running inside a pod
+      containers:
+      - name: flask
+        image: mrasap/flask
+        ports:
+        - containerPort: 8080
+        # These probes are used to check whether it is still alive
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 30
+          timeoutSeconds: 1
+          periodSeconds: 30
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 30
+          timeoutSeconds: 1
+          periodSeconds: 30

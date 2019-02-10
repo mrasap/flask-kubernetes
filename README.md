@@ -25,19 +25,19 @@ github repo: https://github.com/mrasap/flask-kubernetes-helm/
 [X] non-root user running in the container
 [X] Dockerhub repo automatic builds   
 [X] Orchestrate the app with kubernetes   
-[] Templated the deployment with helm   
-[] Automated the complete deployment with a bash script   
-[] Ingress load balancer with nginx-ingress   
-[] TLS support with cert-manager   
-[] Upgrade cert-manager to latest build   
-[] Kubernetes StateFulSet   
-[] Kubernetes namespaces   
-[] Kubernetes rbac   
-[] Postgresql for persistent data   
-[] Redis for caching   
-[] ELK stack for logging   
-[] Prometheus for monitoring?   
-[] Unittests   
-[] Jenkins CI pipeline   
-[] Deployment with Spinnaker   
+[ ] Templated the deployment with helm   
+[ ] Automated the complete deployment with a bash script   
+[ ] Ingress load balancer with nginx-ingress   
+[ ] TLS support with cert-manager   
+[ ] Upgrade cert-manager to latest build   
+[ ] Kubernetes StateFulSet   
+[ ] Kubernetes namespaces   
+[ ] Kubernetes rbac   
+[ ] Postgresql for persistent data   
+[ ] Redis for caching   
+[ ] ELK stack for logging   
+[ ] Prometheus for monitoring?   
+[ ] Unittests   
+[ ] Jenkins CI pipeline   
+[ ] Deployment with Spinnaker   
 

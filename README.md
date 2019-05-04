@@ -9,7 +9,8 @@ The front end is a simple flask app. It creates a simple sqlite database with a 
 - `/` shows the counter
 - `/increase` increases the counter
 
-### Kubectl CLI 101
+### Kubernetes manifests
+github repo: https://github.com/mrasap/flask-kubernetes/
 Guide used: https://www.digitalocean.com/docs/kubernetes/how-to/connect-with-kubectl/   
 Documentation: https://kubernetes.io/docs/   
 

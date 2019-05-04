@@ -9,8 +9,15 @@ The front end is a simple flask app. It creates a simple sqlite database with a 
 - `/` shows the counter
 - `/increase` increases the counter
 
-### Kubernetes manifests
-github repo: https://github.com/mrasap/flask-kubernetes/
+### Kubectl CLI 101
+Guide used: https://www.digitalocean.com/docs/kubernetes/how-to/connect-with-kubectl/   
+Documentation: https://kubernetes.io/docs/   
+
+Download the kubeconfig.yaml file from digital ocean. This yaml file is used to gain access to the kubernetes cluster. Kubectl will look for a config file in ~/.kube and automatically use it to access the cluster. `kubectl version` will also give you the version running on the kubernetes cluster if your config file is setup correctly in ~/.kube. Otherwise, you can also give this config file as a parameter for your kubectl commands using the `--kubeconfig="path/to/kubeconfig.yaml"` flag.   
+
+`kubectl --kubeconfig="flask-kubeconfig.yaml" get nodes` will show you a list of all the nodes using the flask-kubeconfig.yaml file.   
+
+Alternatively, you can also create contexts to store multiple cluster config files: https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/
 
 
 ### Helm templating
